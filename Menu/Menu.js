@@ -39,17 +39,18 @@ function createMenu(arr) {
   Add those items to the <ul>
 */
 
-arr.forEach(item => {
+// could also use:
+// arr.forEach(item => {
+//   const lis = document.createElement('li');
+//   lis.textContent = item;
+//   ul.appendChild(lis);
+// });
+
+arr.map(item => {
   const lis = document.createElement('li');
   lis.textContent = item;
   ul.appendChild(lis);
 });
-
-// const lis = document.querySelector('.menu li ul');
-
-// arr.map(item => {
-//   lis.appendChild(createMenu(item));
-// });
 
 /*
   Step 3: Using a DOM selector, select the menu button (the element with a class of 'menu-button') currently on the DOM.
